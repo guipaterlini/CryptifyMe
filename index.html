@@ -17,18 +17,21 @@
     <title>CryptifyMe</title>
   </head>
   <body>
-    <div>
+    <section class="inputSection">
       <img src="./assets/logo.svg" alt="Logo Alura" />
-      <form>
+      <form class="inputForm">
         <textarea name="mensagem" placeholder="Digite seu texto"></textarea>
-        <span>Apenas letras minúsculas e sem acento.</span>
-        <div>
-          <button type="button">Criptografar</button>
-          <button type="button">Descriptografar</button>
+        <div class="containerLowFormSection">
+          <span class="supportText">Apenas letras minúsculas e sem acento.</span>
+          <div class="containerButtons">
+            <button type="button">Criptografar</button>
+            <button type="button" id="descriptografar">Descriptografar</button>
+          </div>
         </div>
       </form>
-    </div>
-    <div>
+    </section>
+
+    <section class="outputSection">
       <img
         src="./assets/aside-guy.svg"
         alt="Imagem de uma pessoa ajoelhada analisando um objeto valioso com uma lupa"
@@ -37,6 +40,6 @@
       <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
       <div></div>
       <button>Copiar</button>
-    </div>
+    </section>
   </body>
 </html>
