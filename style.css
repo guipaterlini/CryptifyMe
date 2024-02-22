@@ -22,21 +22,26 @@ body {
   background-color: var(--cor-primaria);
   display: flex;
   padding: 40px;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
 }
 
 .inputSection {
-  height: 100%
+  height: 100%;
 }
 
 .inputForm {
   color: var(--cor-secundaria);
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 80px 32px 32px 32px;
   justify-content: space-between;
   height: 100%;
-  max-height: fit-content;
+  width: 45vw;
+  max-width: 700px;
 }
 
 .inputForm textarea {
@@ -99,6 +104,11 @@ body {
 .outputSection {
   background-color: var(--cor-branco);
   border-radius: 32px;
-  padding: 40px;
+  padding: 32px;
   max-width: 400px;
+  width: 30vw;
+}
+
+.outputSection img {
+  width: 100%;
 }
