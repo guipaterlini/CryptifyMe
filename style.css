@@ -3,6 +3,8 @@
   --cor-secundaria: #0a3871;
   --cor-disable: #d8dfe8;
   --cor-branco: #fff;
+  --cor-cinza-500: #343a40;
+  --cor-cinza-400: #495057;
 }
 
 * {
@@ -108,9 +110,32 @@ body {
   padding: 32px;
   max-width: 400px;
   width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .outputSection img {
   width: 100%;
   max-width: 336px;
+  margin-bottom: 32px;
+}
+
+.outputSectionParagraph {
+  line-height: 24px;
+  color: var(--cor-cinza-400);
+}
+
+.outputSectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  margin-bottom: 16px;
+  color: var(--cor-cinza-500);
+}
+
+.outputSection button {
+  display: none;
 }
