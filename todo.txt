@@ -1,4 +1,3 @@
-- precisa adicionar um icone ao lado do texto em cima do botão de criptografar
 - o campo de inserir texto tem uma barra de rolagem
 - campo para aparecer o texto com o resultado
 - botão de copiar e colocar na area de transferencia

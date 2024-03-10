@@ -52,6 +52,7 @@ body {
   border: none;
   font-size: 2rem;
   resize: none;
+  height: 100%;
 }
 
 .inputForm textarea:focus {
