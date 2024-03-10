@@ -35,16 +35,26 @@
     </section>
 
     <section class="outputSection">
-      <img
-        src="./assets/aside-guy.svg"
-        alt="Imagem de uma pessoa ajoelhada analisando um objeto valioso com uma lupa"
-      />
-      <p class="outputSectionTitle">Nenhuma mensagem encontrada</p>
-      <p class="outputSectionParagraph">
-        Digite um texto que você deseja criptografar ou descriptografar.
-      </p>
-      <div></div>
-      <button>Copiar</button>
+      <div id="outputNoAnswer">
+        <img
+          id="imgOutput"
+          src="./assets/aside-guy.svg"
+          alt="Imagem de uma pessoa ajoelhada analisando um objeto valioso com uma lupa"
+        />
+        <p id="outputSectionTitle">Nenhuma mensagem encontrada</p>
+        <p id="outputSectionParagraph">
+          Digite um texto que você deseja criptografar ou descriptografar.
+        </p>
+      </div>
+      <div id="outputWithAnswer">
+        <div id="outputResult">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes,
+          sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut
+          laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit.
+          Libero, sodales duis fames id diam feugiat aliquet non egestas.
+        </div>
+        <button id="outputCopyButton">Copiar</button>
+      </div>
     </section>
   </body>
 </html>

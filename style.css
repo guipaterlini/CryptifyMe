@@ -53,6 +53,7 @@ body {
   font-size: 2rem;
   resize: none;
   height: 100%;
+  line-height: 48px;
 }
 
 .inputForm textarea:focus {
@@ -129,18 +130,23 @@ body {
   text-align: center;
 }
 
-.outputSection img {
+#outputNoAnswer {
+  display: none;
+  flex-direction: column;
+}
+
+#imgOutput {
   width: 100%;
   max-width: 336px;
   margin-bottom: 32px;
 }
 
-.outputSectionParagraph {
+#outputSectionParagraph {
   line-height: 24px;
   color: var(--cor-cinza-400);
 }
 
-.outputSectionTitle {
+#outputSectionTitle {
   font-size: 24px;
   font-weight: 700;
   line-height: 29px;
@@ -148,6 +154,31 @@ body {
   color: var(--cor-cinza-500);
 }
 
-.outputSection button {
-  display: none;
+#outputWithAnswer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+#outputResult {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: left;
+  color: var(--cor-cinza-400);
+  max-width: 336px;
+}
+
+#outputCopyButton {
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid var(--cor-secundaria);
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  background-color: transparent;
+  width: 100%;
+  max-width: 336px;
 }

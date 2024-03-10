@@ -1,6 +1,4 @@
-- o campo de inserir texto tem uma barra de rolagem
-- campo para aparecer o texto com o resultado
-- botão de copiar e colocar na area de transferencia
 -modo tablet
 - modo mobile
+adicionar para deixar o botão de descriptografar disable enquanto nenhum texto for inserido no textoarea
 - criar as funções em javascript para fazer o projeto funcionar
