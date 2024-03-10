@@ -1,4 +1,3 @@
-- botão de descriptar precisa de uma borda
 - imagem do aside precisa ser ajustada
 - textos abaixo da imagem precisão de formatação
 - precisa adicionar um icone ao lado do texto em cima do botão de criptografar
