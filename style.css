@@ -74,8 +74,19 @@ body {
 }
 
 .supportText {
-  font-size: 0.75rem;
   padding: 16px 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.supportText span {
+  font-size: 0.75rem;
+  color: var(--cor-cinza-400);
+}
+
+.supportText img {
+  width: 16px;
 }
 
 .containerButtons {
