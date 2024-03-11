@@ -122,11 +122,10 @@ body {
   align-items: center;
   text-align: center;
   box-shadow: 0px 24px 32px -8px #00000014;
-
 }
 
 #outputNoAnswer {
-  display: none;
+  display: flex;
   flex-direction: column;
 }
 
@@ -150,7 +149,7 @@ body {
 }
 
 #outputWithAnswer {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -182,6 +181,7 @@ body {
   body {
     flex-direction: column;
     padding: 40px;
+    justify-content: flex-start;
   }
 
   .logo {
@@ -199,7 +199,7 @@ body {
   }
 
   .inputForm textarea {
-    min-height:580px
+    min-height: 580px;
   }
 
   .outputSection {
@@ -215,5 +215,9 @@ body {
   #outputResult,
   #outputCopyButton {
     max-width: 100%;
+  }
+
+  #imgOutput {
+    display: none;
   }
 }
