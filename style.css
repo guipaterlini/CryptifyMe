@@ -15,24 +15,17 @@
   padding: 0;
 }
 
-body,
-html {
-  height: 100%;
-}
-
 body {
   background-color: var(--cor-primaria);
   display: flex;
   padding: 40px;
   justify-content: space-between;
+  height: 100vh;
 }
 
 .logo {
   height: 40px;
-}
-
-.inputSection {
-  height: 100%;
+  margin-left: 44px;
 }
 
 .inputForm {
@@ -128,6 +121,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow: 0px 24px 32px -8px #00000014;
+
 }
 
 #outputNoAnswer {
@@ -181,4 +176,44 @@ body {
   background-color: transparent;
   width: 100%;
   max-width: 336px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .logo {
+    margin: 37px 0 116px 0;
+    align-self: baseline;
+  }
+
+  .inputSection {
+    margin: 0 auto;
+  }
+
+  .inputForm {
+    width: 90vw;
+    padding: 0;
+  }
+
+  .inputForm textarea {
+    min-height:580px
+  }
+
+  .outputSection {
+    width: 100%;
+    margin: 64px auto 0 auto;
+    max-width: 100%;
+  }
+
+  #outputWithAnswer {
+    gap: 32px;
+  }
+
+  #outputResult,
+  #outputCopyButton {
+    max-width: 100%;
+  }
 }
