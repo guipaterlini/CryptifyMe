@@ -125,7 +125,6 @@ body {
 }
 
 #outputNoAnswer {
-  display: flex;
   flex-direction: column;
 }
 
@@ -149,7 +148,6 @@ body {
 }
 
 #outputWithAnswer {
-  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -177,6 +175,14 @@ body {
   max-width: 336px;
 }
 
+.disable {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
 @media (max-width: 1024px) {
   body {
     flex-direction: column;
@@ -199,12 +205,12 @@ body {
   }
 
   .inputForm textarea {
-    min-height: 580px;
+    min-height: 50vh;
   }
 
   .outputSection {
     width: 100%;
-    margin: 64px auto 0 auto;
+    margin: 64px auto 50px auto;
     max-width: 100%;
   }
 
@@ -219,5 +225,19 @@ body {
 
   #imgOutput {
     display: none;
+  }
+}
+
+@media (max-width: 478px) {
+  body {
+    padding: 0;
+  }
+
+  .logo {
+    padding-left: 40px;
+  }
+
+  .outputSection {
+    width: 90%;
   }
 }
