@@ -5,6 +5,7 @@ const outputResult = document.getElementById("outputResult");
 const outputCopyButton = document.getElementById("outputCopyButton");
 const outputWithAnswer = document.getElementById("outputWithAnswer");
 const outputNoAnswer = document.getElementById("outputNoAnswer");
+const errorMessage = document.getElementById("errorMessage");
 
 const chavesCriptografia = {
   e: "enter",
@@ -14,13 +15,6 @@ const chavesCriptografia = {
   u: "ufat",
 };
 
-inputTextArea.addEventListener("input", function () {
-  btnCriptografar.disabled = inputTextArea.value.trim() !== "" ? false : true;
-
-  btnDescriptografar.disabled =
-    inputTextArea.value.trim() !== "" ? false : true;
-});
-
 function criptografar(texto) {
   return texto
     .split("")
@@ -29,15 +23,26 @@ function criptografar(texto) {
 }
 
 btnCriptografar.addEventListener("click", function () {
-  const textoCriptografado = criptografar(inputTextArea.value);
+  if (inputTextArea.value.trim() !== "") {
+    const textoCriptografado = criptografar(inputTextArea.value);
 
-  outputResult.textContent = textoCriptografado;
+    outputResult.textContent = textoCriptografado;
 
-  outputNoAnswer.classList.remove("flex");
-  outputNoAnswer.classList.add("disable");
+    outputNoAnswer.classList.remove("flex");
+    outputNoAnswer.classList.add("disable");
 
-  outputWithAnswer.classList.remove("disable");
-  outputWithAnswer.classList.add("flex");
+    outputWithAnswer.classList.remove("disable");
+    outputWithAnswer.classList.add("flex");
 
-  inputTextArea.value = "";
+    inputTextArea.value = "";
+    errorMessage.textContent = "";
+  } else {
+    errorMessage.textContent = "Insira uma mensagem primeiro!";
+  }
 });
+
+// - validar minusculas e acentos
+// - ajustar texto para nao vazar no output result
+// - colocar feedback para o usuario nos botões
+// - colocar para funcionar o botão de descriptografar
+// - colocar para funcionar o botão de copiar

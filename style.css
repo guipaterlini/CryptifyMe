@@ -183,6 +183,15 @@ body {
   display: flex;
 }
 
+#errorMessage {
+  padding-top: 5px;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: red;
+  height: 0.8rem;
+  font-weight: 600;
+}
+
 @media (max-width: 1024px) {
   body {
     flex-direction: column;

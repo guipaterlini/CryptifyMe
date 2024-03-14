@@ -1,3 +1,0 @@
-- modo mobile
-adicionar para deixar o botão de descriptografar disable enquanto nenhum texto for inserido no textoarea
-- criar as funções em javascript para fazer o projeto funcionar
