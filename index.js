@@ -15,6 +15,8 @@ const chavesCriptografia = {
   u: "ufat",
 };
 
+const regex = /[A-ZÀ-Úà-ú]/;
+
 function criptografar(texto) {
   return texto
     .split("")
@@ -23,26 +25,28 @@ function criptografar(texto) {
 }
 
 btnCriptografar.addEventListener("click", function () {
-  if (inputTextArea.value.trim() !== "") {
-    const textoCriptografado = criptografar(inputTextArea.value);
-
-    outputResult.textContent = textoCriptografado;
-
-    outputNoAnswer.classList.remove("flex");
-    outputNoAnswer.classList.add("disable");
-
-    outputWithAnswer.classList.remove("disable");
-    outputWithAnswer.classList.add("flex");
-
-    inputTextArea.value = "";
-    errorMessage.textContent = "";
-  } else {
+  if (inputTextArea.value.trim() == "") {
     errorMessage.textContent = "Insira uma mensagem primeiro!";
+  } else {
+    if (regex.test(inputTextArea.value)) {
+      errorMessage.textContent = "Apenas letras minúsculas e sem acento!";
+    } else {
+      const textoCriptografado = criptografar(inputTextArea.value);
+
+      outputResult.textContent = textoCriptografado;
+
+      outputNoAnswer.classList.remove("flex");
+      outputNoAnswer.classList.add("disable");
+
+      outputWithAnswer.classList.remove("disable");
+      outputWithAnswer.classList.add("flex");
+
+      inputTextArea.value = "";
+      errorMessage.textContent = "";
+    }
   }
 });
 
-// - validar minusculas e acentos
-// - ajustar texto para nao vazar no output result
 // - colocar feedback para o usuario nos botões
 // - colocar para funcionar o botão de descriptografar
 // - colocar para funcionar o botão de copiar
