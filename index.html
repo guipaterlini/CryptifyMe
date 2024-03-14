@@ -20,14 +20,18 @@
     <img class="logo" src="./assets/logo.svg" alt="Logo Alura" />
     <section class="inputSection">
       <form class="inputForm">
-        <textarea name="mensagem" placeholder="Digite seu texto"></textarea>
+        <textarea
+          name="mensagem"
+          placeholder="Digite seu texto"
+          id="inputTextArea"
+        ></textarea>
         <div class="containerLowFormSection">
           <div class="supportText">
             <img src="./assets/alert-icon.svg" />
             <span>Apenas letras minúsculas e sem acento.</span>
           </div>
           <div class="containerButtons">
-            <button type="button">Criptografar</button>
+            <button type="button" id="criptografar">Criptografar</button>
             <button type="button" id="descriptografar">Descriptografar</button>
           </div>
         </div>
@@ -35,7 +39,7 @@
     </section>
 
     <section class="outputSection">
-      <div class="disable" id="outputNoAnswer">
+      <div class="flex" id="outputNoAnswer">
         <img
           id="imgOutput"
           src="./assets/aside-guy.svg"
@@ -46,15 +50,13 @@
           Digite um texto que você deseja criptografar ou descriptografar.
         </p>
       </div>
-      <div class="flex" id="outputWithAnswer">
+      <div class="disable" id="outputWithAnswer">
         <div id="outputResult">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes,
-          sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut
-          laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit.
-          Libero, sodales duis fames id diam feugiat aliquet non egestas.
+         
         </div>
         <button id="outputCopyButton">Copiar</button>
       </div>
     </section>
+    <script src="index.js"></script>
   </body>
 </html>
