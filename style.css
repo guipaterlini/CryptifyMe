@@ -161,6 +161,8 @@ body {
   text-align: left;
   color: var(--cor-cinza-400);
   max-width: 336px;
+  overflow-wrap: break-word;
+  overflow-y: auto;
 }
 
 #outputCopyButton {
@@ -173,6 +175,7 @@ body {
   background-color: transparent;
   width: 100%;
   max-width: 336px;
+  margin-bottom: 0.8rem;
 }
 
 .disable {
