@@ -1,0 +1,266 @@
+:root {
+  --cor-branco: #fff;
+  --cor-cinza-400: #495057;
+  --cor-cinza-500: #343a40;
+  --cor-disable: #d8dfe8;
+  --cor-primaria: #f3f5fc;
+  --cor-secundaria: #0a3871;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-primaria);
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.disable {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.logo {
+  height: 40px;
+  margin-left: 44px;
+}
+
+.inputForm {
+  color: var(--cor-secundaria);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  max-width: 730px;
+  padding: 80px 32px 32px 32px;
+  width: 55vw;
+}
+
+.inputForm button {
+  background-color: var(--cor-secundaria);
+  border: none;
+  border-radius: 24px;
+  color: var(--cor-branco);
+  cursor: pointer;
+  height: 67px;
+  transition: 300ms;
+  width: 100%;
+}
+
+.inputForm button:hover {
+  opacity: 0.7;
+}
+
+.inputForm textarea {
+  background-color: transparent;
+  border: none;
+  color: var(--cor-secundaria);
+  font-size: 2rem;
+  height: 100%;
+  line-height: 48px;
+  resize: none;
+}
+
+.inputForm textarea:focus {
+  outline-style: none;
+}
+
+.inputForm textarea::placeholder {
+  color: var(--cor-secundaria);
+  font-weight: 300;
+  transition: 300ms;
+}
+
+.inputForm textarea:focus::placeholder {
+  color: transparent;
+}
+
+.containerLowFormSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.supportText {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  padding: 16px 0 16px 0;
+}
+
+.supportText span {
+  font-size: 0.75rem;
+  color: var(--cor-cinza-400);
+}
+
+.supportText img {
+  width: 16px;
+}
+
+.containerButtons {
+  display: flex;
+  gap: 24px;
+}
+
+#descriptografar {
+  background-color: transparent;
+  border: 1px solid var(--cor-secundaria);
+  color: var(--cor-secundaria);
+}
+
+#descriptografar:hover {
+  background-color: var(--cor-branco);
+}
+
+.outputSection {
+  align-items: center;
+  background-color: var(--cor-branco);
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px #00000014;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  padding: 32px;
+  text-align: center;
+  width: 30vw;
+}
+
+#outputNoAnswer {
+  flex-direction: column;
+}
+
+#imgOutput {
+  margin-bottom: 32px;
+  max-width: 336px;
+  width: 100%;
+}
+
+#outputSectionParagraph {
+  color: var(--cor-cinza-400);
+  line-height: 24px;
+}
+
+#outputSectionTitle {
+  color: var(--cor-cinza-500);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 29px;
+  margin-bottom: 16px;
+}
+
+#outputWithAnswer {
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+}
+
+#outputResult {
+  color: var(--cor-cinza-400);
+  font-size: 1.5rem;
+  line-height: 36px;
+  max-width: 336px;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#outputCopyButton {
+  background-color: transparent;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 19px;
+  margin-bottom: 0.8rem;
+  max-width: 336px;
+  padding: 24px;
+  text-align: center;
+  transition: 300ms;
+  width: 100%;
+}
+
+#outputCopyButton:hover {
+  background-color: var(--cor-primaria);
+}
+
+#errorMessage {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 600;
+  height: 0.8rem;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px;
+  }
+
+  .logo {
+    align-self: baseline;
+    margin: 37px 0 116px 0;
+  }
+
+  .inputSection {
+    margin: 0 auto;
+  }
+
+  .inputForm {
+    padding: 0;
+    width: 90vw;
+  }
+
+  .inputForm textarea {
+    min-height: 50vh;
+  }
+
+  .outputSection {
+    margin: 64px auto 50px auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #outputWithAnswer {
+    gap: 32px;
+  }
+
+  #outputResult,
+  #outputCopyButton {
+    max-width: 100%;
+  }
+
+  #imgOutput {
+    display: none;
+  }
+}
+
+@media (max-width: 478px) {
+  body {
+    padding: 0;
+  }
+
+  .logo {
+    padding-left: 40px;
+  }
+
+  .outputSection {
+    width: 90%;
+  }
+}
