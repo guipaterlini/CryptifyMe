@@ -89,6 +89,26 @@ btnDescriptografar.addEventListener("click", function () {
   }
 });
 
-// - colocar para funcionar o botão de copiar
+outputCopyButton.addEventListener("click", function () {
+  copiarTexto(outputResult.innerText);
+});
+
+function copiarTexto(texto) {
+  const elementoTemporario = document.createElement("textarea");
+  elementoTemporario.value = texto;
+  document.body.appendChild(elementoTemporario);
+
+  elementoTemporario.select();
+  document.execCommand("copy");
+
+  document.body.removeChild(elementoTemporario);
+
+  outputCopyButton.textContent = "Copiado!";
+
+  setTimeout(function () {
+    outputCopyButton.textContent = "Copiar Texto";
+  }, 2000);
+}
+
 // - arrumar css, organizar propriedades, substituir os px por rem
 // - buscar por otimizações com o chatgpt
