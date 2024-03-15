@@ -1,10 +1,10 @@
 :root {
+  --cor-branco: #fff;
+  --cor-cinza-400: #495057;
+  --cor-cinza-500: #343a40;
+  --cor-disable: #d8dfe8;
   --cor-primaria: #f3f5fc;
   --cor-secundaria: #0a3871;
-  --cor-disable: #d8dfe8;
-  --cor-branco: #fff;
-  --cor-cinza-500: #343a40;
-  --cor-cinza-400: #495057;
 }
 
 * {
@@ -23,6 +23,14 @@ body {
   height: 100vh;
 }
 
+.disable {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
 .logo {
   height: 40px;
   margin-left: 44px;
@@ -32,21 +40,36 @@ body {
   color: var(--cor-secundaria);
   display: flex;
   flex-direction: column;
-  padding: 80px 32px 32px 32px;
-  justify-content: space-between;
   height: 100%;
-  width: 55vw;
+  justify-content: space-between;
   max-width: 730px;
+  padding: 80px 32px 32px 32px;
+  width: 55vw;
+}
+
+.inputForm button {
+  background-color: var(--cor-secundaria);
+  border: none;
+  border-radius: 24px;
+  color: var(--cor-branco);
+  cursor: pointer;
+  height: 67px;
+  transition: 300ms;
+  width: 100%;
+}
+
+.inputForm button:hover {
+  opacity: 0.7;
 }
 
 .inputForm textarea {
-  color: var(--cor-secundaria);
   background-color: transparent;
   border: none;
+  color: var(--cor-secundaria);
   font-size: 2rem;
-  resize: none;
   height: 100%;
   line-height: 48px;
+  resize: none;
 }
 
 .inputForm textarea:focus {
@@ -69,10 +92,10 @@ body {
 }
 
 .supportText {
-  padding: 16px 0 16px 0;
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 8px;
+  padding: 16px 0 16px 0;
 }
 
 .supportText span {
@@ -89,25 +112,10 @@ body {
   gap: 24px;
 }
 
-.inputForm button {
-  color: var(--cor-branco);
-  cursor: pointer;
-  background-color: var(--cor-secundaria);
-  border: none;
-  border-radius: 24px;
-  height: 67px;
-  transition: 300ms;
-  width: 100%;
-}
-
-.inputForm button:hover {
-  opacity: 0.7;
-}
-
 #descriptografar {
-  color: var(--cor-secundaria);
   background-color: transparent;
   border: 1px solid var(--cor-secundaria);
+  color: var(--cor-secundaria);
 }
 
 #descriptografar:hover {
@@ -115,17 +123,17 @@ body {
 }
 
 .outputSection {
+  align-items: center;
   background-color: var(--cor-branco);
   border-radius: 32px;
-  padding: 32px;
-  max-width: 400px;
-  width: 30vw;
+  box-shadow: 0px 24px 32px -8px #00000014;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  max-width: 400px;
+  padding: 32px;
   text-align: center;
-  box-shadow: 0px 24px 32px -8px #00000014;
+  width: 30vw;
 }
 
 #outputNoAnswer {
@@ -133,90 +141,81 @@ body {
 }
 
 #imgOutput {
-  width: 100%;
-  max-width: 336px;
   margin-bottom: 32px;
+  max-width: 336px;
+  width: 100%;
 }
 
 #outputSectionParagraph {
-  line-height: 24px;
   color: var(--cor-cinza-400);
+  line-height: 24px;
 }
 
 #outputSectionTitle {
-  font-size: 24px;
+  color: var(--cor-cinza-500);
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 29px;
   margin-bottom: 16px;
-  color: var(--cor-cinza-500);
 }
 
 #outputWithAnswer {
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  flex-direction: column;
   height: 100%;
+  justify-content: space-between;
+  text-align: center;
   width: 100%;
 }
 
 #outputResult {
-  font-size: 24px;
-  line-height: 36px;
-  text-align: left;
   color: var(--cor-cinza-400);
+  font-size: 1.5rem;
+  line-height: 36px;
   max-width: 336px;
   overflow-wrap: break-word;
   overflow-y: auto;
+  text-align: left;
 }
 
 #outputCopyButton {
-  padding: 24px;
-  border-radius: 24px;
-  border: 1px solid var(--cor-secundaria);
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
   background-color: transparent;
-  width: 100%;
-  max-width: 336px;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 24px;
   cursor: pointer;
-  transition: 300ms;
+  font-size: 1rem;
+  line-height: 19px;
   margin-bottom: 0.8rem;
+  max-width: 336px;
+  padding: 24px;
+  text-align: center;
+  transition: 300ms;
+  width: 100%;
 }
 
 #outputCopyButton:hover {
   background-color: var(--cor-primaria);
 }
 
-.disable {
-  display: none;
-}
-
-.flex {
-  display: flex;
-}
-
 #errorMessage {
-  padding-top: 5px;
-  margin: 0 auto;
-  font-size: 0.8rem;
   color: red;
-  height: 0.8rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  height: 0.8rem;
+  margin: 0 auto;
+  padding-top: 5px;
 }
-
 
 @media (max-width: 1024px) {
   body {
     flex-direction: column;
-    padding: 40px;
     justify-content: flex-start;
+    padding: 40px;
   }
 
   .logo {
-    margin: 37px 0 116px 0;
     align-self: baseline;
+    margin: 37px 0 116px 0;
   }
 
   .inputSection {
@@ -224,8 +223,8 @@ body {
   }
 
   .inputForm {
-    width: 90vw;
     padding: 0;
+    width: 90vw;
   }
 
   .inputForm textarea {
@@ -233,9 +232,9 @@ body {
   }
 
   .outputSection {
-    width: 100%;
     margin: 64px auto 50px auto;
     max-width: 100%;
+    width: 100%;
   }
 
   #outputWithAnswer {
