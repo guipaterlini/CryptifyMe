@@ -15,6 +15,8 @@ const chavesCriptografia = {
   u: "ufat",
 };
 
+const chavesDescriptografia = {};
+
 const regex = /[A-ZÀ-Úà-ú]/;
 
 function criptografar(texto) {
@@ -22,6 +24,19 @@ function criptografar(texto) {
     .split("")
     .map((letra) => chavesCriptografia[letra] || letra)
     .join("");
+}
+
+function descriptografar(texto) {
+  for (const chave in chavesCriptografia) {
+    const valor = chavesCriptografia[chave];
+    chavesDescriptografia[valor] = chave;
+  }
+
+  const regex = new RegExp(Object.keys(chavesDescriptografia).join("|"), "g");
+
+  const substituir = (match) => chavesDescriptografia[match];
+
+  return texto.replace(regex, substituir);
 }
 
 btnCriptografar.addEventListener("click", function () {
@@ -47,8 +62,33 @@ btnCriptografar.addEventListener("click", function () {
   }
 });
 
-// - colocar feedback para o usuario nos botões
-// - colocar para funcionar o botão de descriptografar
+btnDescriptografar.addEventListener("click", function () {
+  if (inputTextArea.value.trim() == "") {
+    errorMessage.textContent = "Insira uma mensagem primeiro!";
+  } else {
+    if (regex.test(inputTextArea.value)) {
+      errorMessage.textContent = "Apenas letras minúsculas e sem acento!";
+    } else {
+      const textoDescriptografado = descriptografar(inputTextArea.value);
+
+      if (textoDescriptografado == inputTextArea.value) {
+        errorMessage.textContent = "Esse texto não está criptografado!";
+      } else {
+        outputResult.textContent = textoDescriptografado;
+
+        outputNoAnswer.classList.remove("flex");
+        outputNoAnswer.classList.add("disable");
+
+        outputWithAnswer.classList.remove("disable");
+        outputWithAnswer.classList.add("flex");
+
+        inputTextArea.value = "";
+        errorMessage.textContent = "";
+      }
+    }
+  }
+});
+
 // - colocar para funcionar o botão de copiar
 // - arrumar css, organizar propriedades, substituir os px por rem
 // - buscar por otimizações com o chatgpt
