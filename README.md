@@ -6,13 +6,13 @@ CryptifyMe é uma aplicação simples para criptografar e descriptografar mensag
 
 ## Recursos
 
-- Criptografa texto substituindo letras específicas por strings predefinidas.
-- Descriptografa texto criptografado de volta à sua forma original.
+- Criptografa do texto substituindo letras específicas por strings predefinidas.
+- Descriptografa do texto criptografado de volta à sua forma original.
 - Opção para copiar texto criptografado ou descriptografado para a área de transferência.
 
 ## Como Funciona:
 
-- O botão "Cryptify" executa o processo de criptografia ou descriptografia.
+- O botão "Criptografar" e "Descriptografar" executam os processos de criptografia ou descriptografia.
 - O botão "Copiar" copia o resultado para a área de transferência.
 - Apenas letras minúsculas sem acentos ou caracteres especiais são suportadas.
 
