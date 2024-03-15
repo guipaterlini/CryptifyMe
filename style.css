@@ -101,13 +101,17 @@ body {
 }
 
 .inputForm button:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 #descriptografar {
   color: var(--cor-secundaria);
-  background-color: var(--cor-disable);
+  background-color: transparent;
   border: 1px solid var(--cor-secundaria);
+}
+
+#descriptografar:hover {
+  background-color: var(--cor-branco);
 }
 
 .outputSection {
@@ -177,6 +181,12 @@ body {
   width: 100%;
   max-width: 336px;
   margin-bottom: 0.8rem;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#outputCopyButton:hover {
+  background-color: var(--cor-primaria);
 }
 
 .disable {

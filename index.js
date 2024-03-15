@@ -50,3 +50,5 @@ btnCriptografar.addEventListener("click", function () {
 // - colocar feedback para o usuario nos botões
 // - colocar para funcionar o botão de descriptografar
 // - colocar para funcionar o botão de copiar
+// - arrumar css, organizar propriedades, substituir os px por rem
+// - buscar por otimizações com o chatgpt
